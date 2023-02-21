@@ -44,11 +44,11 @@ The above code will throw an error `Reference Error username is not defined`.
 if (true) {
   var username = 'Arya';
 }
-console.log(username); // username is not defined
+console.log(username); // Arya
 ```
 In the above code we are looking for the variable named `username`. There is no variable named `username` in the global scope. The variable inside the block scope can't be accesed from outside.
 
-The above code will throw an error `Reference Errer username is not defined`.
+The above code  Output will be Arya.
 
 5. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
 
@@ -119,5 +119,8 @@ Output will be 0 'First'
 for (let i = 0; i < 10; i++) {
   console.log(i, 'First'); // 0 1 2 3 4 5 6 7 8 9 
 }
-console.log(i, 'Second'); // output
+console.log(i, 'Second'); // i is not defined
 ```
+In the above scope `i` is created using let and let is block as well as function scope so from outside the loop it will not be accesed.
+ 
+Output will be 0 1 2 3 4 5 6 7 8 9.
