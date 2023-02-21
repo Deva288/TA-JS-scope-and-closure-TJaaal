@@ -1,15 +1,50 @@
 1. Create a function by your choice that accepts a callback function.
+```js
+function calculator(numA, numB, cb) {
+  return cb(numA, numB);
+}
+function add(numA, numB) {
+  return numA + numB
+}
+function division(numA, numB){
+  return numA - numB
+}
+calculator(5,6,add);
+calculator(6,5,division);
 
+```
 2. Create a function by you choice that returns a function reference.
 
+```js
+function returnsFunctionRf(cb) {
+  return cb;
+}
+
+function add(num1, num2) {
+  return num1 + num2
+}
+
+let sum = returnsFunctionRf (add);
+
+```
 3. Create a higher order function called `map` that takes two inputs:
    - An array of numbers/string/boolean etc
-   - A 'callback' function - a function that is applied to each element of the array (inside of the function 'map')
+   - A 'callback' function - a function that is applied to each element of the array (inside of the function 
+     'map')
 
 Have `map` return a new array filled with values that are the result of the 'callback' function on each element of the input array.
 
 ```js
 // Your code goes here
+
+function map(arr, cb) {
+  let newArr = [];
+   for (elm of arr) {
+    newArr.push(cb(elm));
+   }
+   return newArr;
+}
+
 
 // Test Your Code
 function multiplyByTwo(n) {
@@ -25,6 +60,12 @@ multiplyByTwo(2); //-> 4
 ```js
 // Your code goes here
 
+function forEach(arr, cb){
+  for(elm of arr){
+    cb(elm);
+  }
+}
+
 // Test Your Code
 let alphabet = '';
 let letters = ['a', 'b', 'c', 'd'];
@@ -38,6 +79,16 @@ console.log(alphabet); //prints 'abcd'
 
 ```js
 // Test Your Code
+function filter(arr, cb) {
+  let newArr = [];
+  for(elm of arr) {
+    if(cb(elm) === true){
+      newArr.push(elm);
+    }
+  }
+  return newArr;
+}
+
 
 var numbers = [1, 3, 5, 4, 7, 89, 234, 20];
 let even = filter(numbers, function (n) {
