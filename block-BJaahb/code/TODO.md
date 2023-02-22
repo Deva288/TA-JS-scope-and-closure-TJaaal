@@ -1,4 +1,4 @@
-Create the execution context diagram for the following code snippets:
+1. Create the execution context diagram for the following code snippets:
 
 ```js
 function outer() {
@@ -11,12 +11,12 @@ function outer() {
 }
 let getSum = outer();
 let num = getSum();
+
+![](./img/1.png);
 ```
 
-2.
-
-Create the execution context diagram for following code. Also write the output of the code below.
-
+2. Create the execution context diagram for following code. Also write the output of the code below.
+ c,  
 ```js
 function getCounter() {
   let count = 0;
@@ -28,10 +28,11 @@ function getCounter() {
 
 let counter = getCounter();
 
-counter(); // output
-counter(); // output
-counter(); // output
-counter(); // output
+counter(); // output 0
+counter(); // output 1
+counter(); // output 2
+counter(); // output 3
+![](./img/2.png);
 ```
 
 3. Create the execution context diagram
@@ -49,5 +50,6 @@ let tomato = makeColorChanger('tomato');
 blue();
 tomato();
 
+![](./img/3.png);
 // What will be the background color after the execution of last line
 ```
