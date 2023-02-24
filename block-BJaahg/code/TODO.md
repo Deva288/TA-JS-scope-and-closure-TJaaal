@@ -36,9 +36,9 @@ console.log(window.fullName(firstName, lastName)); // AryaStark
 fucntion addOne(num){
   return num + 1;
 }
-var one = addOne(0);
-var two = addOne(1);
-console.log(one, two);// 
+var one = addOne(0);  
+var two = addOne(1); 
+console.log(one, two);//  1 2
 
 ![]()
 ```
@@ -51,7 +51,7 @@ fucntion addOne(num){
   return num + 1;
 }
 var two = addOne(1);
-console.log(one, two);
+console.log(one, two); // 1 2
 ```
 
 5. Make a Execution Context Diagram for the following JS and write the output.
@@ -62,7 +62,7 @@ fucntion addOne(num){
   return num + 1;
 }
 var two = addOne(1);
-console.log(two);
+console.log(two); // 2
 ```
 
 6. Make a Execution Context Diagram for the following JS and write the output.
@@ -73,7 +73,7 @@ const addOne = (num) => {
   return num + 1;
 };
 var two = addOne(1);
-console.log(two);
+console.log(two); // addOne is not defined
 ```
 
 7. Make a Execution Context Diagram for the following JS and write the output.
@@ -84,7 +84,7 @@ const addOne = (num) => {
   return num + 1;
 };
 var two = addOne(1);
-console.log(two);
+console.log(two); // can't access addOne
 ```
 
 8. What will be the output of the following
@@ -108,9 +108,9 @@ function isAwesome() {
   if (true) {
     awesome = true;
   }
-  console.log(awesome); // undefined
+  console.log(awesome); // true
 }
-isAwesome(); // true
+isAwesome(); 
 ```
 
 10. What will be the output of the following
@@ -166,7 +166,7 @@ console.log(name);  //  Arya Stark
 if (true) {
   let name = 'Arya Stark';
 }
-console.log(name);  //  Arya Stark
+console.log(name);  //  name is not defined
 ```
 
 15. Guess the output of the code below with a reason.
@@ -175,7 +175,7 @@ console.log(name);  //  Arya Stark
 for (var i = 0; i < 20; i++) {
   //
 }
-console.log(i);  // undefined, 
+console.log(i);  // 20
 ```
 
 16. Guess the output of the code below with a reason.
@@ -184,7 +184,7 @@ console.log(i);  // undefined,
 for (let i = 0; i < 20; i++) {
   //
 }
-console.log(i); // undefined, console is not inside the scope bcz let is block scope.
+console.log(i); // i is not defined
 ```
 
 17. Guess the output and the reason behind that.
@@ -222,7 +222,7 @@ function sample() {
   }
   console.log(username, 'second'); // John Snow, var is function scope 
 }
-sample(); // undefined
+sample(); 
 ```
 
 20. Guess the output and the reason behind that.
@@ -236,7 +236,7 @@ function sample() {
   }
   console.log(username, 'second');  // Arya Stark
 }
-sample();  // undefined
+sample(); 
 ```
 
 21. Guess the output and the reason behind that.
@@ -366,6 +366,8 @@ let allFunctions = [
   multiplyThree,
   half,
 ];
+
+allFunctions.reduce((acc, cv) => cv(acc), 100);
 
 // Answer is: 447
 ```
